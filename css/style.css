@@ -456,7 +456,7 @@ main {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 0.5em;
-  overflow: scroll;
+  overflow: hidden;
   background-color: var(--grey-light);
 }
 #home .grid-box {
