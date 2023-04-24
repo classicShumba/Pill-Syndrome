@@ -1,0 +1,39 @@
+@keyframes upScroll {
+    from{transform: translateY(-20rem);}
+    to{transform: translateY(-40rem);}
+};
+@keyframes upScroll2 {
+    from{transform: translateY(-30);}
+    to{transform: translateY(-40rem);}
+}
+
+.one{
+    animation-name: upScroll;
+    animation-duration: 8s;
+    animation-fill-mode: both;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-timing-function: ease-in-out;
+}
+.two{
+    animation-name: upScroll;
+    animation-duration: 6s;
+    animation-fill-mode: both;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+.three{
+    animation-name: upScroll2;
+    animation-duration: 4s;
+    animation-fill-mode: both;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+.four{
+    animation-name: upScroll;
+    animation-duration: 7s;
+    animation-fill-mode: both;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
