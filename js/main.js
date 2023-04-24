@@ -8,6 +8,7 @@ addBtns = document.querySelectorAll(".add");
 subBtns = document.querySelectorAll(".remove");
 qCounts = document.querySelectorAll(".quantitycount");
 buyBtn = document.querySelectorAll(".buy");
+lazyImages = document.querySelectorAll('.lazy')
 
 burger.addEventListener("click", () => {
   nav.classList.toggle("active");
@@ -80,3 +81,20 @@ for (let i = 0; i < subBtns.length; i++) {
     }
   });
 }
+
+const observer = new IntersectionObserver((entries, observer) =>{
+  entries.forEach(entry => {
+    if(entry.isIntersecting){
+      const img = entry.target;
+      img.src = img.dataset.src;
+      img.classList.remove('lazy');
+      observer.unobserve(img)
+    }
+  });
+});
+
+
+
+lazyImages.forEach(img => {
+  observer.observe(img);
+})
